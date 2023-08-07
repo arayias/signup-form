@@ -27,7 +27,7 @@
         </div>
         <div class="middle">
           
-          <form action method>
+          <form id="sign-up-form" action="" method="POST">
             <div class="form-grid">
               <h2 class="grid-header">Let's do this!</h2>
               <div class="input-container">
@@ -53,20 +53,27 @@
 
               <div class="input-container">
                 <label for="password">*Password</label>
-                <input type="password" name="password" id="password" required class="error" minlength="7" maxlength="25">
+                <input type="password" name="password" id="password" required class="error" minlength="7" maxlength="25"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{7,25}">
               </div>
 
               <div class="input-container">
                 <label for="confirm_password">*Confirm Password</label>
                 <input type="password" name="confirm_password" id="confirm_password" required class="error"
-                minlength="7" maxlength="25">
+                minlength="7" maxlength="25"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{7,25}">
+              </div>
+
+
+              <div class="warn" id="error-js">
+
               </div>
 
 
             </div>
 
             <div class="submit-container">
-              <button class="submit" type="submit">Signup</button>
+              <button id='submit-form' class="submit" type="submit">Signup</button>
             </div>
             
           </form>
